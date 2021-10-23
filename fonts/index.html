@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+</head>
+<body>
+	<div class="container">
+		<div class="row">
+			<div class="col-md-6">
+				<label for="sarlavha">Sarlavhani kiriting?</label>
+				<input type="text" id="sarlavha" placeholder="Sarlavha nomi?" name="sarlavha">
+
+				<label for="text">Malumot kiriting?</label>
+				<textarea name="text" id="text" cols="30" rows="10" placeholder="Matnni kiriting"></textarea>
+			</div>
+			<button onclick="add()" class="btn btn-succes">Qo'shish</button>
+		</div>
+
+		<div class="row">
+			<div class="col-md-6">
+				<h1 id="nom"></h1>
+				<p id="matn"></p>
+			</div>
+		</div>
+	</div>
+
+	<script>
+		function add(){
+			let sarlavhaNom = document.getElementById('sarlavha').value;
+			let matnNom = document.getElementById('text').value;
+
+			document.getElementById('nom').innerHTML = sarlavhaNom;
+			document.getElementById('matn').innerHTML = matnNom;
+
+			document.body.style.backgroundColor = prompt('Rangi');
+		}
+	</script>
+</body>
+</html>
